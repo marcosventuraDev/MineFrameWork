@@ -3,8 +3,6 @@
 namespace MF\Init;
 
 abstract class Bootstrap{
-
-    
         private $routes;
         
         abstract protected function initRoutes();
@@ -13,7 +11,6 @@ abstract class Bootstrap{
             {
                 $this->initRoutes();
                 $this->run($this->getUrl());
-
             }
 
        //Metodo get para receber e retornar o valor de "routes"
@@ -36,7 +33,7 @@ abstract class Bootstrap{
             //verifica se a url é igual à varialvel route do indice route
             if($url == $route['route'])
             {
-                $class = "App\\Controllers\\". ucfirst($route['controller']);
+                $class = "App\\Controllers\\".ucfirst($route['controller']);
     
                 $controller = new $class;
                 $action = $route['action'];
