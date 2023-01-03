@@ -1,4 +1,22 @@
 <?php
-  foreach($this->view->dados as $indice => $valor){
-    echo $valor.'<br/>';
- }
+
+foreach($this->view->dados as $indice => $info){ ?>
+ <h1> <?= $info['titulo']?></h1>;
+<br />
+<p><?= $info['descricao']?></p>
+
+ 
+
+<?php  }
+
+
+
+/* foreach($this->view->dados as $indice => $info){
+    echo"<h1>".$info['titulo']."</h1>";
+
+    echo $info['descricao'];
+    echo "<hr />";
+
+
+   // echo $valor.'<br/>';
+ } */
